@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dongguk.cse.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/top_menu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_menu_height"
+        android:layout_gravity="bottom"
+        android:background="@color/themeColor"
+        android:layout_alignParentTop="true"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/imageView"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_strong"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/top_title_size"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/app_name" />
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/menu_bar"
+        android:layout_below="@id/top_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/colorPrimaryDark"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_menu_height"
+            android:layout_gravity="bottom"
+            android:background="@color/themeColor"
+            android:padding="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/menu_home"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:clickable="true"
+                android:textColor="@color/white"
+                android:text="@string/menu_name_1"
+                android:textSize="@dimen/font_size_default"
+                android:src="@drawable/menu_home_s"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                />
+
+            <View
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/whiteTranparent"
+                />
+
+            <View
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/whiteTranparent"
+                />
+            <TextView
+                android:id="@+id/menu_log"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="@string/menu_name_2"
+                android:src="@drawable/menu_log_s"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/menu_bar"
+        >
+    </androidx.viewpager.widget.ViewPager>
+
+</RelativeLayout>

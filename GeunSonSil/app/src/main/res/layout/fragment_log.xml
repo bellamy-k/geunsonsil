@@ -1,16 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/tutorialview"
-        android:text="log"
-        android:textSize="30dp"
-        android:textAlignment="center"
+        android:orientation="vertical">
+    <LinearLayout
+        android:background = "@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/info_bar"
+        android:layout_margin="15dp"
         android:gravity="center"
-        />
+        android:orientation="horizontal">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="총"
+
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_main" />
+
+        <TextView
+            android:id="@+id/holder_walk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="6401"
+            android:textColor="@color/grayline"
+            android:textSize="@dimen/font_size_main" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=" 걸음!"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_main" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="169dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:gravity="center" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/info_bar"
+            android:layout_margin="5dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:background="@color/black"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="어제보다 "
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_main" />
+
+            <TextView
+                android:id="@+id/sdfgsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="2001"
+                android:textColor="@color/grayline"
+                android:textSize="@dimen/font_size_main" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=" 걸음 적습니다!!"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_main" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/info_bar"
+
+            android:layout_marginLeft="30dp"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6401"
+                android:textColor="@color/grayline"
+
+                android:textSize="@dimen/font_size_main" />
+
+            <TextView
+                android:id="@+id/sdfgssssg"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="걸음(2019/12/12)"
+                android:textSize="@dimen/font_size_main" />
+
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:text="" />
+
+        <LinearLayout
+
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/info_bar"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8402"
+                android:textColor="@color/red"
+
+                android:textSize="@dimen/font_size_main" />
+
+            <TextView
+                android:id="@+id/sdsdfgssssg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="걸음(2019/12/11)"
+                android:textSize="@dimen/font_size_main" />
+
+
+
+
+        </LinearLayout>
+        <Button
+
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="50dp"
+            android:id="@+id/button2"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@color/red"
+            android:text="" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>
